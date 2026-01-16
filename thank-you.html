@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you - Upload your materials">
+    <title>Thank You - Resume Gover</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>Resume Gover</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services & Pricing</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Thank You!</h1>
+                <p class="page-subtitle">Your payment has been received. Please complete the intake form below.</p>
+            </div>
+        </section>
+
+        <section class="intake-section">
+            <div class="container">
+                <div class="intake-form-container">
+                    <div class="form-intro">
+                        <h2>Upload & Intake Form</h2>
+                        <p>Please provide the following information so we can begin working on your materials. All information is kept confidential and secure.</p>
+                    </div>
+
+                    <form id="intakeForm" class="intake-form">
+                        <div class="form-section">
+                            <h3>Contact Information</h3>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Service Details</h3>
+                            <div class="form-group">
+                                <label for="service">Service Purchased *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="resume">Resume Clarity & Restructuring</option>
+                                    <option value="cover-letter">Cover Letter Creation</option>
+                                    <option value="alignment">Application Wording Alignment</option>
+                                    <option value="multiple">Multiple Services</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="target-position">Target Position/Job Title</label>
+                                <input type="text" id="target-position" name="target-position" placeholder="e.g., Administrative Assistant, Policy Analyst">
+                            </div>
+                            <div class="form-group">
+                                <label for="target-agency">Target Agency/Department (if applicable)</label>
+                                <input type="text" id="target-agency" name="target-agency" placeholder="e.g., Department of Health, City of [Your City]">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Document Upload</h3>
+                            <div class="form-group">
+                                <label for="current-resume">Current Resume *</label>
+                                <input type="file" id="current-resume" name="current-resume" accept=".pdf,.doc,.docx" required>
+                                <small>Accepted formats: PDF, DOC, DOCX (Max 10MB)</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="job-posting">Job Posting (if available)</label>
+                                <input type="file" id="job-posting" name="job-posting" accept=".pdf,.doc,.docx,.txt">
+                                <small>Upload the job posting or description you're applying for</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="additional-docs">Additional Documents</label>
+                                <input type="file" id="additional-docs" name="additional-docs" accept=".pdf,.doc,.docx" multiple>
+                                <small>Any other relevant documents (optional)</small>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Additional Information</h3>
+                            <div class="form-group">
+                                <label for="special-requirements">Special Requirements or Notes</label>
+                                <textarea id="special-requirements" name="special-requirements" rows="4" placeholder="Any specific requirements, formatting preferences, or important information we should know..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="timeline">Preferred Timeline</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">Select timeline</option>
+                                    <option value="standard">Standard (5-7 business days)</option>
+                                    <option value="rush">Rush (2-3 business days) - Additional fee may apply</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms-accept" required>
+                                    <span>I have read and agree to the <a href="terms.html" target="_blank">Terms & Disclaimer</a> *</span>
+                                </label>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="privacy-accept" required>
+                                    <span>I have read and agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> *</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large">Submit Intake Form</button>
+                        </div>
+                    </form>
+
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <h3>✓ Submission Successful!</h3>
+                        <p>Thank you for submitting your intake form. We've received your information and will begin working on your materials shortly.</p>
+                        <p>You will receive a confirmation email at the address you provided. If you have any questions, please contact us at <a href="mailto:info@resumegover.com">info@resumegover.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Resume Gover</h3>
+                    <p>Professional resume assistance for government and public-sector positions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms & Disclaimer</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Services & Pricing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Resume Gover. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
